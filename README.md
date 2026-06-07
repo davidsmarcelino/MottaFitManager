@@ -1,239 +1,250 @@
-# MottaFit - Sistema Completo de Gestão de Treinos e Academia
+# MottaFit - Complete Gym & Personal Training Management System
 
-## 🏋️ Sobre o Projeto
+## 🏋️ About
 
-Sistema completo para gestão de academia desenvolvido com .NET 8 Lambda API e React TypeScript. Oferece funcionalidades abrangentes para professores gerenciarem alunos, treinos, aulas, pagamentos e avaliações corporais.
+MottaFit is a full-stack gym management platform built with **.NET 8 Lambda API** and **React TypeScript**. It gives personal trainers a single place to manage students, workouts, classes, payments, and body assessments — all accessible from any device.
 
-## 🚀 Funcionalidades Principais
+## 🚀 Features
 
-### 👨🏫 **Professor**
-- ✅ **Autenticação**: Login seguro com JWT
-- ✅ **Cadastro**: Auto-registro de professores
-- ✅ **Gestão de Exercícios**: CRUD completo com 8 categorias
-- ✅ **Criação de Treinos**: Treinos personalizados semanais
-- ✅ **Gestão de Alunos**: Convites e gerenciamento
-- ✅ **Calendário de Aulas**: Agendamento e controle de status
-- ✅ **Controle Financeiro**: Pagamentos e relatórios
-- ✅ **Bioimpedância**: Avaliações corporais científicas
-- ✅ **Histórico de Cargas**: Acompanhamento de progressão
+### 👨‍🏫 Trainer
+- ✅ **Authentication** — Secure login with JWT
+- ✅ **Registration** — Self-registration for trainers
+- ✅ **Exercise Management** — Full CRUD across 8 muscle categories
+- ✅ **Workout Builder** — Personalised weekly training plans
+- ✅ **Student Management** — Invite-based onboarding and management
+- ✅ **Class Calendar** — Schedule classes and track attendance status
+- ✅ **Financial Control** — Payment tracking and monthly reports
+- ✅ **Body Composition** — Scientific bioimpedance assessments
+- ✅ **Load History** — Automatic progression tracking
 
-### 👨🎓 **Aluno**
-- ✅ **Cadastro via Convite**: Registro através de link do professor
-- ✅ **Login Seguro**: Autenticação com JWT
-- ✅ **Treinos Personalizados**: Visualização de treinos semanais
-- ✅ **Detalhes dos Exercícios**: Informações completas e vídeos
-- ✅ **Histórico de Cargas**: Acompanhamento de evolução
-- ✅ **Avaliações Corporais**: Visualização de bioimpedância
+### 👨‍🎓 Student
+- ✅ **Invite Registration** — Sign up via trainer's invitation link
+- ✅ **Secure Login** — JWT-based authentication
+- ✅ **Personalised Workouts** — View weekly training plans
+- ✅ **Exercise Details** — Full instructions and video references
+- ✅ **Load History** — Track personal progression over time
+- ✅ **Body Assessments** — View bioimpedance results and evolution
 
-### 🏃♂️ **Exercícios**
-- ✅ **8 Categorias**: Peito, Costas, Ombros, Bíceps, Tríceps, Pernas, Abdômen, Aeróbico
-- ✅ **Informações Completas**: Nome, séries, repetições, carga, vídeo
-- ✅ **CRUD Completo**: Apenas professores podem gerenciar
+### 🏃‍♂️ Exercises
+- ✅ **8 Categories** — Chest, Back, Shoulders, Biceps, Triceps, Legs, Core, Cardio
+- ✅ **Full Details** — Sets, reps, load, and video reference per exercise
+- ✅ **Trainer-only Management** — Students have read-only access
 
-### 📋 **Treinos**
-- ✅ **Treinos Semanais**: Organização por dias da semana
-- ✅ **Exercícios Personalizados**: Parâmetros específicos por aluno
-- ✅ **Histórico de Cargas**: Tracking automático de progressão
-- ✅ **Observações**: Notas específicas por exercício
+### 📋 Workouts
+- ✅ **Weekly Structure** — Organised by day of the week
+- ✅ **Per-student Parameters** — Custom sets, reps, and load per student
+- ✅ **Load Tracking** — Automatic progression history
+- ✅ **Exercise Notes** — Trainer observations per exercise
 
-### 📅 **Sistema de Aulas**
-- ✅ **Calendário Visual**: Interface intuitiva com múltiplas visualizações
-- ✅ **Agendamento**: Criação de aulas individuais ou recorrentes
-- ✅ **Status de Aulas**: Agendada, Realizada, Faltou, Remarcada
-- ✅ **Remarcação**: Sistema de reagendamento com histórico
-- ✅ **Mobile Responsivo**: Otimizado para dispositivos móveis
+### 📅 Class Scheduling
+- ✅ **Visual Calendar** — Multiple views (week/day/month)
+- ✅ **Flexible Scheduling** — Single or recurring classes
+- ✅ **Attendance Status** — Scheduled, Completed, Missed, Rescheduled
+- ✅ **Rescheduling** — Full reschedule flow with history
+- ✅ **Mobile Responsive** — Optimised for smartphone use
 
-### 💰 **Controle Financeiro**
-- ✅ **Valor por Aluno**: Configuração individual de preços
-- ✅ **Cobrança Automática**: Baseada em aulas realizadas/faltou
-- ✅ **Controle de Pagamentos**: Registro de recebimentos
-- ✅ **Relatórios Mensais**: Análise financeira detalhada
-- ✅ **Formas de Pagamento**: PIX, Dinheiro, Cartão
+### 💰 Financial Management
+- ✅ **Per-student Pricing** — Individual rate configuration
+- ✅ **Automatic Billing** — Based on completed or missed classes
+- ✅ **Payment Tracking** — Log and confirm received payments
+- ✅ **Monthly Reports** — Detailed revenue analysis
+- ✅ **Payment Methods** — PIX, Cash, Credit/Debit Card
 
-### 🔬 **Bioimpedância**
-- ✅ **Cálculos Científicos**: Fórmulas Kyle et al. e Harris-Benedict
-- ✅ **Composição Corporal**: IMC, % gordura, massa magra, TMB
-- ✅ **Comparações**: Análise de evolução entre avaliações
-- ✅ **Medidas Antropométricas**: Circunferências e dobras cutâneas
-- ✅ **Relatórios Detalhados**: Visualização completa dos resultados
+### 🔬 Body Composition (Bioimpedance)
+- ✅ **Scientific Formulas** — Kyle et al. and Harris-Benedict equations
+- ✅ **Full Body Analysis** — BMI, body fat %, lean mass, BMR
+- ✅ **Progress Comparison** — Side-by-side assessment history
+- ✅ **Anthropometric Data** — Circumferences and skinfold measurements
+- ✅ **Detailed Reports** — Comprehensive result visualisation
 
-## 🛠️ Tecnologias
+## 🛠️ Tech Stack
 
-### **Backend**
-- **.NET 8** - Framework principal
-- **AWS Lambda** - Serverless computing
-- **AWS DynamoDB** - Banco NoSQL
-- **JWT Bearer** - Autenticação
-- **BCrypt** - Hash de senhas
+### Backend
+- **.NET 8** — Core framework
+- **AWS Lambda** — Serverless compute
+- **AWS DynamoDB** — NoSQL database
+- **JWT Bearer** — Stateless authentication
+- **BCrypt** — Password hashing
 
-### **Frontend**
-- **React 18** - Framework UI
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Estilização
-- **Lucide React** - Ícones
-- **Axios** - Cliente HTTP
+### Frontend
+- **React 18** — UI framework
+- **TypeScript** — Static typing
+- **Tailwind CSS** — Utility-first styling
+- **Lucide React** — Icon library
+- **Axios** — HTTP client
 
-### **Infraestrutura**
-- **AWS API Gateway** - Gerenciamento de APIs
-- **GitHub Actions** - CI/CD
-- **AWS IAM** - Controle de acesso
-- **Região SA-East-1** - São Paulo
+### Infrastructure
+- **AWS API Gateway** — API management and routing
+- **GitHub Actions** — CI/CD pipeline
+- **AWS IAM** — Access control
+- **Region** — SA-East-1 (São Paulo)
 
-## 📊 Estrutura do Banco (DynamoDB)
+## 📊 Database Structure (DynamoDB)
 
-### Tabelas:
-- **Professores** - Dados dos professores
-- **Alunos** - Informações dos alunos
-- **Convites** - Sistema de convites
-- **Exercicios** - Catálogo de exercícios
-- **Treinos** - Treinos personalizados
-- **Aulas** - Agendamentos e status
-- **Pagamentos** - Controle financeiro
-- **Bioimpedancia** - Avaliações corporais
-- **HistoricoCarga** - Progressão de cargas
+| Table | Description |
+|---|---|
+| `Trainers` | Trainer profiles and credentials |
+| `Students` | Student data and associations |
+| `Invites` | Invite token management |
+| `Exercises` | Exercise catalogue |
+| `Workouts` | Personalised training plans |
+| `Classes` | Scheduled sessions and attendance |
+| `Payments` | Financial records |
+| `Bioimpedance` | Body composition assessments |
+| `LoadHistory` | Weight/rep progression tracking |
 
-## ⚙️ Configuração
+## ⚙️ Configuration
 
-### **AWS Credentials**
+### AWS Credentials
 ```json
 {
   "AWS": {
     "Region": "sa-east-1",
-    "AccessKey": "sua_access_key",
-    "SecretKey": "sua_secret_key"
+    "AccessKey": "your_access_key",
+    "SecretKey": "your_secret_key"
   }
 }
 ```
 
-### **JWT Configuration**
+### JWT Configuration
 ```json
 {
   "Jwt": {
-    "Key": "sua-chave-secreta-jwt-muito-segura-com-pelo-menos-32-caracteres",
+    "Key": "your-secret-jwt-key-minimum-32-characters",
     "Issuer": "MottaFit.Api",
     "Audience": "MottaFit.Client"
   }
 }
 ```
 
-## 🔗 Principais Endpoints
+## 🔗 API Endpoints
 
-### **Autenticação**
-- `POST /api/auth/login/professor` - Login professor
-- `POST /api/auth/login/aluno` - Login aluno
-- `POST /api/professor/cadastrar` - Cadastro professor
+### Authentication
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/auth/login/trainer` | Trainer login |
+| POST | `/api/auth/login/student` | Student login |
+| POST | `/api/trainer/register` | Trainer registration |
 
-### **Exercícios**
-- `GET /api/exercicio/listar` - Listar exercícios
-- `POST /api/exercicio/criar` - Criar exercício
-- `PUT /api/exercicio/atualizar/{id}` - Atualizar exercício
+### Exercises
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/exercise/list` | List all exercises |
+| POST | `/api/exercise/create` | Create exercise |
+| PUT | `/api/exercise/update/{id}` | Update exercise |
 
-### **Treinos**
-- `GET /api/treino` - Listar treinos
-- `POST /api/treino` - Criar treino
-- `PUT /api/treino/{id}/carga` - Atualizar cargas
+### Workouts
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/workout` | List workouts |
+| POST | `/api/workout` | Create workout |
+| PUT | `/api/workout/{id}/load` | Update load data |
 
-### **Aulas**
-- `GET /api/aula/listar` - Listar aulas
-- `POST /api/aula/criar` - Criar aula
-- `PUT /api/aula/status/{id}` - Atualizar status
+### Classes
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/class/list` | List classes |
+| POST | `/api/class/create` | Schedule a class |
+| PUT | `/api/class/status/{id}` | Update class status |
 
-### **Financeiro**
-- `GET /api/aluno/relatorio-financeiro` - Relatório financeiro
-- `POST /api/aluno/marcar-pagamento` - Marcar pagamento
+### Financial
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/student/financial-report` | Monthly financial report |
+| POST | `/api/student/confirm-payment` | Confirm payment received |
 
-### **Bioimpedância**
-- `POST /api/bioimpedancia/criar` - Criar avaliação
-- `GET /api/bioimpedancia/comparar/{alunoId}` - Comparar avaliações
+### Body Composition
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | `/api/bioimpedance/create` | Create assessment |
+| GET | `/api/bioimpedance/compare/{studentId}` | Compare assessments |
 
-## 📁 Arquitetura do Projeto
+## 📁 Project Structure
 
 ```
 MottaFit/
-├── MottaFit.Api/                    # Backend .NET 8 Lambda
-│   ├── Controllers/                 # Controllers da API
-│   ├── Services/                    # Camada de negócio
-│   ├── Models/                      # Modelos de dados
-│   ├── DTOs/                        # Data Transfer Objects
-│   └── Helpers/                     # Utilitários
-├── web/                             # Frontend React
+├── MottaFit.Api/                 # .NET 8 Lambda Backend
+│   ├── Controllers/              # API route handlers
+│   ├── Services/                 # Business logic layer
+│   ├── Models/                   # Domain models
+│   ├── DTOs/                     # Data Transfer Objects
+│   └── Helpers/                  # Utility classes
+├── web/                          # React TypeScript Frontend
 │   ├── src/
-│   │   ├── components/              # Componentes React
-│   │   ├── pages/                   # Páginas da aplicação
-│   │   ├── services/                # Serviços de API
-│   │   ├── contexts/                # Contextos React
-│   │   └── types/                   # Tipos TypeScript
-│   └── public/                      # Arquivos estáticos
-└── .github/workflows/               # CI/CD GitHub Actions
+│   │   ├── components/           # Reusable UI components
+│   │   ├── pages/                # Application pages
+│   │   ├── services/             # API integration layer
+│   │   ├── contexts/             # React context providers
+│   │   └── types/                # TypeScript type definitions
+│   └── public/                   # Static assets
+└── .github/workflows/            # CI/CD pipeline definitions
 ```
 
-## 🎯 Fluxo de Uso Completo
+## 🎯 Usage Flow
 
-### **Professor:**
-1. **Cadastro/Login** → Acesso ao sistema
-2. **Criação de Exercícios** → Monta catálogo personalizado
-3. **Convite de Alunos** → Envia links de cadastro
-4. **Criação de Treinos** → Treinos semanais personalizados
-5. **Agendamento de Aulas** → Calendário de atendimentos
-6. **Controle Financeiro** → Gestão de pagamentos
-7. **Avaliações Corporais** → Bioimpedância científica
+### Trainer Journey
+1. **Register / Login** → Access the dashboard
+2. **Build Exercise Library** → Create a personalised catalogue
+3. **Invite Students** → Send registration links
+4. **Create Workouts** → Assign weekly plans per student
+5. **Schedule Classes** → Manage the training calendar
+6. **Track Payments** → Monitor revenue and outstanding amounts
+7. **Run Assessments** → Record and compare body composition
 
-### **Aluno:**
-1. **Cadastro via Convite** → Registro através do professor
-2. **Login** → Acesso personalizado
-3. **Visualização de Treinos** → Treinos semanais
-4. **Acompanhamento** → Histórico de cargas e evolução
-5. **Avaliações** → Visualização de bioimpedância
+### Student Journey
+1. **Register via Invite** → Sign up through trainer's link
+2. **Login** → Access personal dashboard
+3. **View Workouts** → See weekly training plan
+4. **Log Progress** → Record weights and reps
+5. **Track Results** → View body composition history
 
-## 🔒 Segurança
+## 🔒 Security
 
-- ✅ **Senhas Criptografadas**: BCrypt hash
-- ✅ **JWT Tokens**: Expiração 24h
-- ✅ **Autorização Role-Based**: Professor/Aluno
-- ✅ **Validação de Propriedade**: Recursos por usuário
-- ✅ **CORS Configurado**: Segurança de origem
-- ✅ **HTTPS**: Comunicação segura
+- ✅ **Password Hashing** — BCrypt with salt
+- ✅ **JWT Tokens** — 24h expiry with refresh flow
+- ✅ **Role-Based Auth** — Trainer vs Student access levels
+- ✅ **Resource Ownership** — Users can only access their own data
+- ✅ **CORS Policy** — Configured per environment
+- ✅ **HTTPS Only** — All traffic encrypted in transit
 
-## 📱 Responsividade
+## 📱 Responsive Design
 
-- ✅ **Mobile First**: Design otimizado para celular
-- ✅ **Touch Friendly**: Botões com tamanho adequado (44px+)
-- ✅ **Calendário Mobile**: Visualização automática por dia
-- ✅ **Formulários Adaptativos**: Inputs otimizados
-- ✅ **Navegação Intuitiva**: UX simplificada
+- ✅ **Mobile First** — Designed for smartphone use from the ground up
+- ✅ **Touch Friendly** — All interactive elements ≥ 44px
+- ✅ **Adaptive Calendar** — Auto-switches to daily view on mobile
+- ✅ **Adaptive Forms** — Optimised input types per device
+- ✅ **Intuitive Navigation** — Simplified UX for on-the-go use
 
-## 🚀 Deploy e CI/CD
+## 🚀 CI/CD & Deployment
 
-- ✅ **GitHub Actions**: Deploy automático
-- ✅ **AWS Lambda**: Serverless deployment
-- ✅ **Ambiente de Produção**: sa-east-1 (São Paulo)
-- ✅ **Rollback Automático**: Em caso de falhas
+- ✅ **GitHub Actions** — Automated build and deploy pipeline
+- ✅ **AWS Lambda** — Zero-downtime serverless deployments
+- ✅ **Production Environment** — SA-East-1 (São Paulo)
+- ✅ **Automatic Rollback** — Reverts on failed deployments
 
-## 📈 Métricas e Análises
+## 📈 Scientific Calculations
 
-### **Cálculos Científicos:**
-- **Bioimpedância**: Fórmulas Kyle et al.
-- **TMB**: Harris-Benedict equation
-- **Composição Corporal**: Análise completa
-- **Progressão**: Tracking automático de cargas
+**Body Composition:**
+- Bioimpedance analysis using Kyle et al. formulas
+- Basal Metabolic Rate via Harris-Benedict equation
+- Full body composition breakdown (fat mass, lean mass, BMI)
+- Automatic load progression tracking
 
-### **Relatórios Financeiros:**
-- **Receita Mensal**: Valores recebidos vs pendentes
-- **Análise por Aluno**: Performance individual
-- **Formas de Pagamento**: Distribuição de recebimentos
+**Financial Analytics:**
+- Monthly revenue (received vs pending)
+- Per-student performance breakdown
+- Payment method distribution
 
-## 🔄 Próximas Funcionalidades
+## 🔄 Roadmap
 
-- 📊 **Dashboard Analytics**: Métricas avançadas
-- 📱 **App Mobile Nativo**: iOS/Android
-- 🔔 **Notificações Push**: Lembretes de aulas
-- 📈 **Relatórios Avançados**: Análises preditivas
-- 🎯 **Metas e Objetivos**: Sistema de gamificação
+- 📊 **Analytics Dashboard** — Advanced performance metrics
+- 📱 **Native Mobile App** — iOS & Android
+- 🔔 **Push Notifications** — Class reminders and alerts
+- 📈 **Advanced Reports** — Predictive analytics
+- 🎯 **Goals & Milestones** — Gamification layer
 
 ---
 
-**MottaFit** - Sistema completo para gestão profissional de academias e personal trainers 💪🏋️‍♂️
+**MottaFit** — Professional management platform for gyms and personal trainers 💪
 
-**Versão**: 1.0.0 - Fase 1 Completa
-**Região**: AWS SA-East-1 (São Paulo)
-**Status**: Produção ✅
+**Version:** 1.0.0 — Phase 1 Complete &nbsp;|&nbsp; **Region:** AWS SA-East-1 &nbsp;|&nbsp; **Status:** Production ✅
