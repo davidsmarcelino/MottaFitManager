@@ -1,0 +1,45 @@
+services:
+  dynamodb:
+    image: amazon/dynamodb-local:latest
+    command: "-jar DynamoDBLocal.jar -sharedDb -dbPath /home/dynamodblocal/data"
+    volumes:
+      - dynamodb-data:/home/dynamodblocal/data
+    restart: unless-stopped
+
+  dynamodb-init:
+    image: amazon/aws-cli:2.17.45
+    depends_on:
+      - dynamodb
+    entrypoint: ["/bin/sh", "/init/init-dynamodb.sh"]
+    volumes:
+      - ./docker/init-dynamodb.sh:/init/init-dynamodb.sh:ro
+    restart: "no"
+
+  api:
+    build:
+      context: .
+      dockerfile: MottaFit.Api/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_URLS: http://+:8080
+      DYNAMODB_SERVICE_URL: http://dynamodb:8000
+      JWT_KEY: ${JWT_KEY:?Set JWT_KEY in Coolify}
+      Jwt__Issuer: MottaFit.Api
+      Jwt__Audience: MottaFit.Client
+    depends_on:
+      dynamodb-init:
+        condition: service_completed_successfully
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    depends_on:
+      - api
+    ports:
+      - "80"
+    restart: unless-stopped
+
+volumes:
+  dynamodb-data:
