@@ -95,6 +95,26 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 var app = builder.Build();
+
+if (!string.IsNullOrWhiteSpace(builder.Configuration["DynamoDB:ServiceUrl"] ?? Environment.GetEnvironmentVariable("DYNAMODB_SERVICE_URL")))
+{
+    using var scope = app.Services.CreateScope();
+    var dynamoDb = scope.ServiceProvider.GetRequiredService<IAmazonDynamoDB>();
+    var existing = (await dynamoDb.ListTablesAsync()).TableNames.ToHashSet(StringComparer.Ordinal);
+    var tables = new[] { "Professores", "Alunos", "Convites", "Exercicios", "Treinos", "Aulas", "Pagamentos", "Bioimpedancias", "HistoricoCargas" };
+
+    foreach (var table in tables)
+    {
+        if (existing.Contains(table)) continue;
+        await dynamoDb.CreateTableAsync(new Amazon.DynamoDBv2.Model.CreateTableRequest
+        {
+            TableName = table,
+            AttributeDefinitions = new() { new("Id", Amazon.DynamoDBv2.ScalarAttributeType.S) },
+            KeySchema = new() { new("Id", Amazon.DynamoDBv2.KeyType.HASH) },
+            BillingMode = Amazon.DynamoDBv2.BillingMode.PAY_PER_REQUEST
+        });
+    }
+}
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseCors("AllowAll");
